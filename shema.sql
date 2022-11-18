@@ -8,9 +8,10 @@ create table my_db.CUSTOMERS (
 );
 
 insert into my_db.CUSTOMERS (name, surname, age, phone_number) values ('Анна', 'Прохватаева', '27', '12345');
+insert into my_db.CUSTOMERS (name, surname, age, phone_number) values ('Анна', 'Прохватаева', '27', '12345');
 insert into my_db.CUSTOMERS (name, surname, age, phone_number) values ('Максим', 'Прохватаев', '41', '12345');
 insert into my_db.CUSTOMERS (name, surname, age, phone_number) values ('Алексей', 'Волков', '33', '12345');
-insert into my_db.CUSTOMERS (name, surname, age, phone_number) values ('Алексей', 'Крутой', '53', '12345');
+insert into my_db.CUSTOMERS (name, surname, age, phone_number) values ('Иван', 'Крутой', '53', '12345');
 insert into my_db.CUSTOMERS (name, surname, age, phone_number) values ('Ирина', 'Телегина', '28', '12345');
 
 
@@ -32,4 +33,4 @@ insert into my_db.orders (date, customer_id, product_name, amount) values ('01.0
 insert into my_db.orders (date, customer_id, product_name, amount) values ('01.01.2020', '2','Шоколад','15');
 insert into my_db.orders (date, customer_id, product_name, amount) values ('01.01.2020', '3','Темный шоколад','15');
 
-drop table my_db.orders;
+drop table my_db.customers;

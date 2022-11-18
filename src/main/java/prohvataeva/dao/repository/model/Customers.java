@@ -14,8 +14,8 @@ public class Customers {
     }
 
     public Customers(String name, String productName) {
-        name = this.name;
-        productName = this.productName;
+        this.name = name;
+        this.productName = productName;
     }
 
     public String getName() {
@@ -67,9 +67,7 @@ public class Customers {
     public String toString() {
         return "Customers{" +
                 "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", age=" + age +
-                ", productName='" + productName + '\'' +
+               ", productName='" + productName + '\'' +
                 '}';
     }
 }

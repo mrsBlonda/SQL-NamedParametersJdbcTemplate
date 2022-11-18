@@ -20,7 +20,7 @@ public class SQLController {
     }
 
     @GetMapping("/products/fetch-product")
-    public List<String> getProductName(@RequestParam("name") String name) {
-        return sqlRepository.getProductName(name);
+    public Customers getProductName2(@RequestParam("name") String name) {
+        return sqlRepository.getProductName2(name);
     }
 }

@@ -27,22 +27,24 @@ public class SQLRepository {
     }
 
 
-    public List<String> getProductName(String name) {
-        List<String> customers;
-        customers = namedParameterJdbcTemplate.queryForList(read("selectionOfName.sql"),
-                Map.of("name", name), String.class);
-        return customers;
-
-    }
-
-//    public Customers getProductName2(String name) {
-//        List<Customers> customers;
-//        Customers customers1 = namedParameterJdbcTemplate.queryForObject(read("selectionOfName.sql"),
-//                Map.of("name", name),
-//                (rs, rowNum) ->
-//                        new Customers(rs.getString("name"), rs.getString("product_name")));
-//        return customers1;
+//    public List<String> getProductName(String name) {
+//        List<String> customers;
+//        customers = namedParameterJdbcTemplate.queryForList(read("selectionOfName.sql"),
+//                Map.of("name", name), String.class);
+//        return customers;
+//
 //    }
+
+    public Customers getProductName2(String name) {
+        List<Customers> customers = new ArrayList<>();
+
+        Customers customers1 = namedParameterJdbcTemplate.queryForObject(read("selectionOfNameAndProductName.sql"),
+                Map.of("name", name),
+                (rs, rowNum) ->
+                        new Customers(rs.getString("name"), rs.getString("product_name")));
+
+        return customers1;
+    }
 
 
 
